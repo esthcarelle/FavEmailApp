@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">FavEmailApp</string>
+    
+    <!-- Main Screen -->
+    <string name="email_viewer">Kureba Email</string>
+    <string name="select_another_file">Hitamo dosiye yindi</string>
+    
+    <!-- Initial State -->
+    <string name="select_email_file">Hitamo Dosyie ya Email</string>
+    <string name="select_email_file_description">Nyamuneka hitamo dosiye ya .pb kugirango urebe email</string>
+    <string name="select_file">Hitamo Dosiye</string>
+    <string name="email_icon">Ikonisi ya email</string>
+    
+    <!-- Loading State -->
+    <string name="loading_email">Buri gufungura email…</string>
+    
+    <!-- Error State -->
+    <string name="error">Ikosa</string>
+    <string name="try_again">Gerageza nanone</string>
+    <string name="error_icon">Ikonisi y\'ikosa</string>
+    
+    <!-- Email Content -->
+    <string name="load_another_email">Fungura Email Yindi</string>
+    <string name="from">Kuva</string>
+    <string name="sender">Wohereje</string>
+    <string name="subject">Inyandiko</string>
+    <string name="body">Inyandiko</string>
+    <string name="attached_image">Ifoto Yashyizweho</string>
+    <string name="image">Ifoto</string>
+    <string name="attached_image_description">Ifoto yashyizweho</string>
+    
+    <!-- Verification -->
+    <string name="verified">Byemejwe</string>
+    <string name="failed">Byanze</string>
+    <string name="email_verified">Email Yemejwe</string>
+    <string name="verification_failed">Gukemura Byanze</string>
+    <string name="verification_failed_description">Gukemura kimwe cyangwa byinshi byanze</string>
+    
+    <!-- Theme Switcher -->
+    <string name="theme_settings">Igenamiterere</string>
+    <string name="light">Umweru</string>
+    <string name="dark">Umwijima</string>
+    <string name="system">Sisitemu</string>
+    <string name="selected">Byahiswemo</string>
+    
+    <!-- Language Switcher -->
+    <string name="language_settings">Igenamiterere y\'ururimi</string>
+    
+    <!-- Error Messages -->
+    <string name="error_file_empty">Dosiye watoranyije ni nta kintu. Nyamuneka hitamo dosiye ya email nziza.</string>
+    <string name="error_file_corrupted">Dosiye watoranyije niba nta kintu cyangwa yononekaye.</string>
+    <string name="error_file_no_email_data">Dosiye niba ni protobuf nziza ariko nta makuru ya email ifite.</string>
+    <string name="error_file_invalid_format">Dosiye watoranyije si dosiye ya email nziza. Yononekaye cyangwa ifite imiterere itari iyo. Nyamuneka hitamo dosiye ya .pb nziza.</string>
+    <string name="error_file_cannot_read">Ntushobora gusoma dosiye watoranyije. Nyamuneka menye ko dosiye irasomwa kandi ugerageze nanone.</string>
+    <string name="error_file_parse_failed">Gusobanura dosiye ya email byanze: Imiterere ya dosiye si nziza cyangwa yononekaye. Nyamuneka hitamo dosiye ya email nziza (imiterere ya .pb).</string>
+    <string name="error_file_not_found">Dosiye watoranyije ntaboneka. Nyamuneka hitamo dosiye yindi.</string>
+    <string name="error_file_not_readable">Dosiye watoranyije ntishobora gusomwa. Nyamuneka menye uburenganzira bwa dosiye.</string>
+    <string name="error_load_email_generic">Gufungura email byanze. Nyamuneka menye ko watoranyije dosiye ya email nziza (imiterere ya .pb).</string>
+    <string name="error_load_email_with_message">Gufungura email byanze: %1$s</string>
+    <string name="error_loading_email">Ikosa mu gufungura email: %1$s</string>
+</resources>
+

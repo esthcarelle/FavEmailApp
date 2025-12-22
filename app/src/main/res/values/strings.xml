@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">FavEmailApp</string>
+    
+    <!-- Main Screen -->
+    <string name="email_viewer">Email Viewer</string>
+    <string name="select_another_file">Select another file</string>
+    
+    <!-- Initial State -->
+    <string name="select_email_file">Select Email File</string>
+    <string name="select_email_file_description">Please select a .pb file to view the email</string>
+    <string name="select_file">Select File</string>
+    <string name="email_icon">Email icon</string>
+    
+    <!-- Loading State -->
+    <string name="loading_email">Loading email…</string>
+    
+    <!-- Error State -->
+    <string name="error">Error</string>
+    <string name="try_again">Try Again</string>
+    <string name="error_icon">Error icon</string>
+    
+    <!-- Email Content -->
+    <string name="load_another_email">Load Another Email</string>
+    <string name="from">From</string>
+    <string name="sender">Sender</string>
+    <string name="subject">Subject</string>
+    <string name="body">Body</string>
+    <string name="attached_image">Attached Image</string>
+    <string name="image">Image</string>
+    <string name="attached_image_description">Attached image</string>
+    
+    <!-- Verification -->
+    <string name="verified">Verified</string>
+    <string name="failed">Failed</string>
+    <string name="email_verified">Email Verified</string>
+    <string name="verification_failed">Verification Failed</string>
+    <string name="verification_failed_description">One or more verification checks failed</string>
+    
+    <!-- Theme Switcher -->
+    <string name="theme_settings">Theme settings</string>
+    <string name="light">Light</string>
+    <string name="dark">Dark</string>
+    <string name="system">System</string>
+    <string name="selected">Selected</string>
+    
+    <!-- Language Switcher -->
+    <string name="language_settings">Language settings</string>
+    
+    <!-- Error Messages -->
+    <string name="error_file_empty">The selected file is empty. Please select a valid email file.</string>
+    <string name="error_file_corrupted">The selected file appears to be empty or corrupted.</string>
+    <string name="error_file_no_email_data">The file appears to be a valid protobuf file but doesn\'t contain email data.</string>
+    <string name="error_file_invalid_format">The selected file is not a valid email file. It may be corrupted or in the wrong format. Please select a valid .pb file.</string>
+    <string name="error_file_cannot_read">Could not read the selected file. Please make sure the file is accessible and try again.</string>
+    <string name="error_file_parse_failed">Failed to parse email file: The file format is invalid or corrupted. Please select a valid email file (.pb format).</string>
+    <string name="error_file_not_found">The selected file could not be found. Please select a different file.</string>
+    <string name="error_file_not_readable">The selected file cannot be read. Please check file permissions.</string>
+    <string name="error_load_email_generic">Failed to load email. Please make sure you selected a valid email file (.pb format).</string>
+    <string name="error_load_email_with_message">Failed to load email: %1$s</string>
+    <string name="error_loading_email">Error loading email: %1$s</string>
+</resources>

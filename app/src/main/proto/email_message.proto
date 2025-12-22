@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package com.qtsoftwareltd.favemailapp.proto;
+
+// Email message structure with hash verification
+message EmailMessage {
+  string sender_name = 1;              // Name of the email sender
+  string sender_email_address = 2;     // Email address of the sender
+  string subject = 3;                  // Email subject line
+  string body = 4;                     // Email body text
+  bytes attached_image = 5;            // Raw image bytes (PNG, JPEG, etc.)
+  string body_hash = 6;                // SHA-256 hash of the body text
+  string image_hash = 7;               // SHA-256 hash of the image bytes
+}
+
