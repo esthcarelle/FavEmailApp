@@ -68,7 +68,7 @@ class MainActivity : ComponentActivity() {
     
     override fun attachBaseContext(newBase: Context) {
         // Apply saved language before creating the context
-        // This ensures the locale is set before any resources are loaded
+        // Sets locale before resources are loaded
         val updatedContext = LocaleManager.applySavedLanguage(newBase)
         super.attachBaseContext(updatedContext)
     }

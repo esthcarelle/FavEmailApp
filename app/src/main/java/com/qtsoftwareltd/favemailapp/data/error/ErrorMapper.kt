@@ -13,7 +13,7 @@ object ErrorMapper {
     
     /**
      * Map an exception to an AppError
-     * This is the main entry point for converting exceptions to our error types
+     * Converts exceptions to AppError types
      */
     fun mapException(exception: Throwable): AppError {
         return when (exception) {

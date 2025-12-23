@@ -32,7 +32,7 @@ object DatabaseModule {
     
     /**
      * Provide the EmailDao from the database
-     * This allows other classes to access the database
+     * Provides database instance for dependency injection
      */
     @Provides
     fun provideEmailDao(database: EncryptedDB): EmailDao {

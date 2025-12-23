@@ -12,14 +12,8 @@ import javax.crypto.SecretKey
 import javax.crypto.spec.SecretKeySpec
 
 /**
- * Secure key manager for storing and retrieving database encryption password
- * Uses Android Keystore for maximum security
- * 
- * This class provides secure storage of the database password using:
- * 1. Android Keystore - Hardware-backed security (if available)
- * 2. EncryptedSharedPreferences - Software-based encryption (fallback)
- * 
- * The password is never stored in plain text and is protected by the device's security features
+ * Manages secure storage of database encryption password
+ * Uses Android Keystore with EncryptedSharedPreferences fallback
  */
 object SecureKeyManager {
     private const val TAG = "SecureKeyManager"
@@ -28,11 +22,9 @@ object SecureKeyManager {
     private const val KEY_PASSWORD = "db_password_key"
     
     /**
-     * Get or generate the database password securely
-     * This method will:
-     * 1. Try to retrieve existing password from secure storage
-     * 2. If not found, generate a new one and store it securely
-     * 3. Return the password as ByteArray for SQLCipher
+     * Gets or generates the database password securely
+     * Tries EncryptedSharedPreferences first, falls back to Android Keystore,
+     * then uses device-specific deterministic password if both fail
      */
     fun getDatabasePassword(context: Context): ByteArray {
         return try {
@@ -75,7 +67,7 @@ object SecureKeyManager {
                 getPasswordFromKeystore(context)
             } catch (keystoreException: Exception) {
                 // Last resort: Generate a password based on app package and device info
-                // This is less secure but ensures the app works
+                // Less secure fallback to ensure app works
                 Log.e(TAG, "All secure storage methods failed, using fallback", keystoreException)
                 generateFallbackPassword(context)
             }
@@ -101,7 +93,7 @@ object SecureKeyManager {
     
     /**
      * Try to use Android Keystore to store/retrieve the password
-     * This provides hardware-backed security on supported devices
+     * Provides hardware-backed security on supported devices
      */
     private fun getPasswordFromKeystore(context: Context): ByteArray {
         return try {
@@ -163,7 +155,7 @@ object SecureKeyManager {
     
     /**
      * Fallback password generation if all secure methods fail
-     * This is less secure but ensures the app continues to work
+     * Less secure fallback to ensure app continues working
      * Uses app package name and a device-specific identifier
      */
     private fun generateFallbackPassword(context: Context): ByteArray {
@@ -188,7 +180,7 @@ object SecureKeyManager {
     
     /**
      * Clear stored password (useful for testing or reset)
-     * WARNING: This will make existing encrypted database inaccessible
+     * WARNING: Makes existing encrypted database inaccessible
      */
     fun clearStoredPassword(context: Context) {
         try {

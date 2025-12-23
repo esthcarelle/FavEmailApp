@@ -2,7 +2,7 @@ package com.qtsoftwareltd.favemailapp.data.error
 
 /**
  * Result pattern for handling success and error states
- * This is a type-safe way to handle operations that can fail
+ * Type-safe result wrapper for operations that can fail
  * 
  * Usage:
  * ```

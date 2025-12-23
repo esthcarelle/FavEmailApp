@@ -18,6 +18,9 @@ coroutines = "1.7.3"
 lifecycleViewmodel = "2.9.4"
 navigationCompose = "2.8.4"
 securityCrypto = "1.1.0-alpha06"
+mockito = "5.11.0"
+mockitoKotlin = "5.2.1"
+coroutinesTest = "1.7.3"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -63,6 +66,11 @@ androidx-navigation-compose = { group = "androidx.navigation", name = "navigatio
 
 # Security Crypto for EncryptedSharedPreferences
 androidx-security-crypto = { group = "androidx.security", name = "security-crypto", version.ref = "securityCrypto" }
+
+# Testing
+mockito-core = { group = "org.mockito", name = "mockito-core", version.ref = "mockito" }
+mockito-kotlin = { group = "org.mockito.kotlin", name = "mockito-kotlin", version.ref = "mockitoKotlin" }
+kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutinesTest" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

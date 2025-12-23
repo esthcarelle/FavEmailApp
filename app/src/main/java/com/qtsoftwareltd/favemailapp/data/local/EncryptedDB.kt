@@ -14,7 +14,7 @@ import java.io.File
 
 /**
  * Encrypted database using Room and SQLCipher
- * This ensures all data stored in the database is encrypted
+ * All database data is encrypted at rest
  * 
  * The database password is securely stored using:
  * - Android Keystore (hardware-backed security when available)
@@ -43,7 +43,7 @@ abstract class EncryptedDB : RoomDatabase() {
          * which uses Android Keystore and EncryptedSharedPreferences
          * 
          * If the database was created with a different password (e.g., old hardcoded password),
-         * this will delete the old database and create a new one with the secure password.
+         * deletes the old database and creates a new one with the secure password.
          */
         fun create(context: Context): EncryptedDB {
             // Get database password securely from SecureKeyManager
@@ -114,7 +114,7 @@ abstract class EncryptedDB : RoomDatabase() {
         
         /**
          * Delete all database files (database, journal, wal, shm files)
-         * This is used when the database password has changed
+         * Used when the database password has changed
          */
         private fun deleteDatabaseFiles(context: Context, databaseName: String) {
             val databasePath = context.getDatabasePath(databaseName)

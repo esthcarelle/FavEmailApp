@@ -11,7 +11,7 @@ import java.io.File
 
 /**
  * State holder for the email app
- * This hoists all UI state to a single place, making it easier to manage and test
+ * Hoists UI state to a single place for easier management
  */
 @Stable
 class EmailAppState(
@@ -30,7 +30,7 @@ class EmailAppState(
 ) {
     /**
      * Update the selected file
-     * This is called when a file is selected from the file picker
+     * Called when a file is selected from the file picker
      */
     fun selectFile(file: File) {
         selectedFile.value = file
@@ -47,7 +47,7 @@ class EmailAppState(
 
 /**
  * Remember and create the EmailAppState
- * This is the state hoisting function that should be called at the top level
+ * State hoisting function for app-level state management
  * 
  * @param initialTheme The initial theme mode (defaults to SYSTEM)
  * @param initialLanguage The initial language (defaults to system language)

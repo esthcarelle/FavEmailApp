@@ -5,7 +5,7 @@ import com.qtsoftwareltd.favemailapp.R
 
 /**
  * Sealed class representing all possible errors in the app
- * This provides type-safe error handling
+ * Type-safe error handling with sealed classes
  */
 sealed class AppError(
     messageArgs: Array<String> = emptyArray()

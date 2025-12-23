@@ -7,7 +7,7 @@ import net.sqlcipher.database.SQLiteDatabase
 
 /**
  * Application class for Hilt dependency injection
- * This must be annotated with @HiltAndroidApp for Hilt to work
+ * Must be annotated with @HiltAndroidApp for Hilt dependency injection
  */
 @HiltAndroidApp
 class FavEmailApplication : Application() {
@@ -19,7 +19,7 @@ class FavEmailApplication : Application() {
         LocaleManager.applySavedLanguage(this)
         
         // Initialize SQLCipher native libraries
-        // This must be called before any database operations
+        // Must be called before any database operations
         SQLiteDatabase.loadLibs(this)
     }
     

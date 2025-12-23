@@ -12,17 +12,14 @@ import java.io.FileInputStream
 import java.io.IOException
 
 /**
- * Parser for Protocol Buffer email files
- * Reads and parses .pb files into EmailMessage objects
- * Uses Result pattern for type-safe error handling
+ * Parses Protocol Buffer email files into EmailMessage objects
  */
 object ProtobufParser {
     
     private const val TAG = "ProtobufParser"
     
     /**
-     * Parse a Protocol Buffer file into an EmailMessage
-     * Returns Result for type-safe error handling
+     * Parses a .pb file into an EmailMessage
      * 
      * @param file The .pb file to parse
      * @return Result.Success with EmailMessage or Result.Error with AppError
@@ -38,7 +35,7 @@ object ProtobufParser {
     
     /**
      * Internal parsing method that throws exceptions
-     * This is wrapped by parseEmailFile which converts to Result
+     * Wrapped by parseEmailFile which converts exceptions to Result
      * 
      * @param file The .pb file to parse
      * @return Parsed EmailMessage

@@ -48,7 +48,7 @@ class EmailViewModel @Inject constructor(
     
     init {
         // Observe the latest email from the database
-        // This ensures UI updates when database changes
+        // Observes database changes and updates UI
         viewModelScope.launch {
             emailRepository.getLatestEmail()
                 .catch { exception ->
@@ -65,7 +65,7 @@ class EmailViewModel @Inject constructor(
                     emailMessage?.let {
                         _email.value = it
                         // Always update to Success when we receive an email from the database
-                        // This will update the state after loadEmailFile saves the email
+                        // State updates after loadEmailFile saves the email
                         _uiState.value = EmailUiState.Success(it)
                     } ?: run {
                         // If email is null and we're not loading, go to Initial state

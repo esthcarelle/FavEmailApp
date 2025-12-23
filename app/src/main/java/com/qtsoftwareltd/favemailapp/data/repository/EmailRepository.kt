@@ -9,8 +9,7 @@ import javax.inject.Singleton
 
 /**
  * Repository for email messages
- * This is the single source of truth for email data
- * Handles business logic like hash verification
+ * Handles data operations and hash verification
  */
 @Singleton
 class EmailRepository @Inject constructor(
@@ -18,14 +17,13 @@ class EmailRepository @Inject constructor(
 ) {
     
     /**
-     * Get the latest email message as a Flow
-     * The UI will automatically update when the database changes
+     * Gets the latest email message as a Flow
      */
     fun getLatestEmail(): Flow<EmailMessage?> = emailDao.getLatestEmail()
     
     /**
-     * Save an email message to the encrypted database
-     * Also verifies the hash integrity before saving
+     * Saves an email message to the encrypted database
+     * Verifies hash integrity before saving
      * 
      * @param email The email message to save
      * @return The saved email with verification status
